@@ -14,6 +14,7 @@ class testMaze(unittest.TestCase):
     Since this is a TestCase class, calling unittest.main() will automatically
     run any of the funtions that start with the word 'test'
     """
+
     
     def setUp(self):
         """
@@ -22,10 +23,23 @@ class testMaze(unittest.TestCase):
         to do anything here
         """
 
+        self.m=Maze()
+
+    def testMazeExists(self):
+        """
+        this will check to see if we have a maze class but as soon
+        as setUp is run, we will see a failure so we really don't
+        need to do anything here
+        """
+
         pass
     
-#    def testScreenExists(self):
-#        assert type(self.m.s) == turtle._Screen
+    def testScreenExists(self):
+        assert type(self.m.s) == turtle._Screen
+
+    def testTurtleExists(self):
+        assert type(self.m.t) == turtle._Turtle
+        
 
 unittest.main()
     
